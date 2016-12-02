@@ -1,0 +1,29 @@
+<div class="wrap">
+<div class="containerBox">
+  <div class="header"></div>
+  <div class="loginPart">
+    <form id="signupForm" name="signupForm" ng-submit="saveUser()" method="POST">
+      <div class="loginHeader"></div>
+      <div class="formgroup" id="loginUse">
+        <label for="username">用户名</label>
+        <input id="username" name="username" type="text" ng-model="username" required ng-minlength="4" ng-maxlength="8" ng-pattern="/^\w+$/" ng-changes>       
+        <span class="error" ng-if="signupForm.username.$error.pattern">输入下划线、字母或数字</span>
+        <span class="error" ng-if="signupForm.username.$error.minlength || signupForm.username.$error.maxlength">输入长度在4-8之间</span>
+        <span class="exits"></span>
+      </div>
+      <div class="formgroup">
+        <label for="userpassword">密码</label>
+        <input id="userpassword" type="password" name="password" ng-model="password" required ng-minlength="4" ng-maxlength="8" ng-pattern="/^\w+$/">
+        <span class="error" ng-if="signupForm.password.$error.pattern">输入下划线、字母或数字</span>
+        <span class="error" ng-if="signupForm.password.$error.minlength || signupForm.password.$error.maxlength">输入长度在4-8之间</span>
+      </div>
+      <div class="formgroup" id="checkpassword">
+        <label for="checkpassword">确认密码</label>
+        <input id="checkpassword" type="password" name="checkpassword" ng-model="checkpassword">
+        <p class="passwordError" ng-if="passwordCheck()">密码不一致</p>
+      </div>
+      <input type="submit" id="submit" class="btn btn-success" ng-disabled="signupForm.$invalid" value="注册">
+    </form>
+  </div>
+</div>
+</div>

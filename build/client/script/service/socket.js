@@ -1,0 +1,1 @@
+var socket=angular.module("socket",[]);socket.factory("socket",function(n){var o=io.connect("http://localhost:3000");return{on:function(t,c){o.on(t,function(){var t=arguments;n.$apply(function(){c.apply(o,t)})})},emit:function(t,c,a){o.emit(t,c,function(){var t=arguments;n.$apply(function(){a&&a.apply(o,t)})})}}});

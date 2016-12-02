@@ -1,0 +1,21 @@
+<div class="wrap">
+<div class="containerBox">
+  <h2>Chat With Others</h2>
+  <div class="loginPart">
+    <form id="entryForm" ng-submit="checklogin()">
+      <div class="formgroup">
+        <label for="username">用户名</label>
+        <input id="username" type="text" name="username" ng-model="username">
+        <p class="tail" ng-if="notExit()">用户不存在</p>
+      </div>
+      <div class="formgroup">
+        <label for="userpassword">密码</label>
+        <input id="userpassword" type="password" name="password" ng-model="password">
+        <p class="tail1" ng-if="error()">密码错误</p>
+      </div>
+      <button id="submit" class="btn btn-success" type="submit">登录</button>
+      <a href="#/signup">注册</a>
+    </form>
+  </div>
+</div>
+</div>

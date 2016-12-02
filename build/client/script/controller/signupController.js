@@ -1,0 +1,1 @@
+var signupController=angular.module("signupController",[]);signupController.controller("signupController",function(o,s,n,r){o.passwordCheck=function(){if(o.password!==o.checkpassword)return!0},o.saveUser=function(){r.post("http://localhost:3000/signup",o.username,o.password).success(function(s){o.reqpost=s,console.log(s)}),1!=o.reqpost&&s.go("/"),console.log(o.username)}});

@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 partOne">
+	    <div class="profile">
+	        <a href="/" ng-click="layout()">退出登录</a>
+		    <img src={{load}} ng-click="change()">
+		    <span>{{username}}</span>
+		    <p>{{signature}}</p>
+	    </div>
+	    <div class="classify">
+	        <p>个人分组</p>
+		    <ul class="individual" ng-repeat="ins in individual track by $index" ng-click="chatWith($index)">
+			    <li ng-mouseover="show=true" ng-mouseleave="show=false" >
+			        <img src={{ins.img}}>
+			        <span>{{ins.username}}</span>
+			        <span>({{ins.signature}})</span>
+			    </li>
+                <div class="showMini" ng-mouseover="show=true" ng-mouseleave="show=false" ng-show="show">
+	    	        <img ng-src={{ins.img}}>
+	    	        <div class="miniprofile">
+	    		        <p>用户名:{{ins.username}}</p>
+	    		        <p>个性签名:{{ins.signature}}</p>
+	    	        </div>
+	    	        <button class="delete btn btn-danger" ng-click="del($index)">删除</button>
+	            </div>
+		    </ul>
+		    <p>群组分组</p>
+		    <ul class="group" ng-repeat="group in groups track by $index">
+			    <li>
+			        <img ng-src="{{group.img}}">
+			        <span>{{group.username}}</span>
+			    </li>
+		    </ul>
+	    </div>
+	    <div class="add">
+		    <span>添加朋友</span>
+		    <input type="text" name="otherPerson" ng-model="otherPerson">
+		    <button class="btn btn-success" ng-click="search()">查询</button>
+	    </div>
+	    <div class="showMiniLast" ng-if="exit()">
+	    	<img src={{otherImg}}>
+	    	<div class="miniprofile">
+	    		<p>用户名:{{otherPerson}}</p>
+	    		<p>个性签名:{{othersignature}}</p>
+	    	</div>
+	    	<button class="addIt btn btn-success" ng-click="addIt()">添加</button>
+	    </div>
+	    <p class="errorTips">{{tip}}</p>
+	  </div>
+	 <div class="col-md-9 partTwo" ui-view="chatPane"></div>
+  </div>
+</div>

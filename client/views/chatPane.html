@@ -1,0 +1,18 @@
+<div class="chatPart">
+	<div class="classifyName">
+	<h1>{{chatname}}</h1>
+	</div>
+	<div class="chatContent">
+		<li ng-repeat="con in cons track by $index">
+			<p ng-if="con.sendCo" class='addContent'>{{con.sendCo}}</p>
+			<span ng-if="con.sendName" class='addUsername'>{{con.sendName}}</span>
+			<p ng-if="con.content" class='reply'>{{con.content}}</p>
+			<span ng-if="con.username" class='replayname'>{{con.username}}</span>
+		</li>
+	</div>
+	<div class="sendPart">
+		<button class="add">+</button>
+		<input type="text" ng-model="sendMsgs">
+		<send></send>
+	</div>
+</div>

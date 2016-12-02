@@ -1,0 +1,454 @@
+body,html,h1,h2,h3,p,form,input{
+	padding: 0;
+	margin: 0;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+body,html{
+	overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 16px;
+}
+ul{
+    cursor: pointer;
+}
+li{
+    list-style-type: none;
+}
+.wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:white;
+    background: url(../img/yese.jpg);
+}
+.containerBox h2{
+    margin: 70px auto;
+    color: white;
+    width: 15ch;/*文本的宽度*/
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .05em solid;
+    -webkit-animation: typing 8s steps(15),
+               caret 1s steps(1) infinite;
+    -o-animation: typing 8s steps(15),
+               caret 1s steps(1) infinite;
+    -moz-animation: typing 8s steps(15),
+               caret 1s steps(1) infinite;
+    animation: typing 8s steps(15),
+               caret 1s steps(1) infinite;
+}
+@-webkit-keyframes typing{
+    from {width:0;}
+}
+@-o-keyframes typing{
+    from {width:0;}
+}
+@-moz-keyframes typing{
+    from {width:0;}
+}
+@keyframes typing{
+    from {width:0;}
+}
+@-webkit-keyframes caret{
+    50% {border-color: transparent;}
+}
+@-moz-keyframes caret{
+    50% {border-color: transparent;}
+}
+@-o-keyframes caret{
+    50% {border-color: transparent;}
+}
+@keyframes caret{
+    50% {border-color: transparent;}
+}
+.loginPart{
+	text-align: center;
+	position: relative;
+}
+.containerBox form{
+	width: 450px;
+	height:300px;
+	margin: 80px auto 10px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+    background:rgba(219, 233, 242, 0.6);
+    background:
+        radial-gradient(circle at top left,transparent 25px,rgba(219, 233, 242, 0.6) 0) top left,
+        radial-gradient(circle at top right,transparent 25px,rgba(219, 233, 242, 0.6)  0) top right,
+        radial-gradient(circle at bottom right,transparent 25px,rgba(219, 233, 242, 0.6) 0) bottom right,
+        radial-gradient(circle at bottom left,transparent 25px,rgba(219, 233, 242, 0.6) 0) bottom left;
+    background:
+        -moz-radial-gradient(circle at top left,transparent 25px,rgba(219, 233, 242, 0.6) 0) top left,
+        -moz-radial-gradient(circle at top right,transparent 25px,rgba(219, 233, 242, 0.6) 0) top right,
+        -moz-radial-gradient(circle at bottom right,transparent 25px,rgba(219, 233, 242, 0.6) 0) bottom right,
+        -moz-radial-gradient(circle at bottom left,transparent 25px,rgba(219, 233, 242, 0.6) 0) bottom left;
+    background:
+        -webkit-radial-gradient(circle at top left,transparent 25px,rgba(219, 233, 242, 0.6) 0) top left,
+        -webkit-radial-gradient(circle at top right,transparent 25px,rgba(219, 233, 242, 0.6) 0) top right,
+        -webkit-radial-gradient(circle at bottom right,transparent 25px,rgba(219, 233, 242, 0.6) 0) bottom right,
+        -webkit-radial-gradient(circle at bottom left,transparent 25px,rgba(219, 233, 242, 0.6) 0) bottom left;
+    background:
+        -o-radial-gradient(circle at top left,transparent 25px,rgba(219, 233, 242, 0.6) 0) top left,
+        -o-radial-gradient(circle at top right,transparent 25px,rgba(219, 233, 242, 0.6) 0) top right,
+        -o-radial-gradient(circle at bottom right,transparent 25px,rgba(219, 233, 242, 0.6) 0) bottom right,
+        -o-radial-gradient(circle at bottom left,transparent 25px,rgba(219, 233, 242, 0.6) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+@media (max-width: 460px){
+    .containerBox form{
+       width: 300px;
+       height:250px;  
+       font-size: 0.875rem;
+       padding-top: 20px;
+    }
+}
+.containerBox .formgroup{
+    margin: 30px auto;
+    text-align: right;
+    width: 245px;
+}
+.containerBox .formgroup input{
+    margin-left: 10px;
+    width: 60%;
+}
+.containerBox a{
+	line-height: 36px;
+	color: white;
+    border-left: 1px solid white;
+    padding-left: 6px;
+}
+#signupForm{
+    margin-top: 140px;
+}
+#signupForm .formgroup{
+	margin: 18px auto;
+    text-align: right;
+    width: 60%;
+}
+#signupForm .formgroup#checkpassword,#signupForm .formgroup#loginUse{
+	position: relative;
+}
+#signupForm .passwordError{
+	display: block;
+    position: absolute;
+    line-height: 27px;
+    top: 0;
+    right: -90px;
+    color: #000;
+}
+.formgroup .exits{
+    position: absolute;
+    top: 0;
+    right: -90px;
+    color: #000;
+    border: 0;
+    background-color: transparent;
+    width: 80px;
+}
+.error{
+	color: red;
+	display: block;
+}
+#entryForm .tail{
+	position: absolute;
+    left: 260px;
+}
+#entryForm .tail1{
+	position: absolute;
+    left: 270px;
+}
+.container-fluid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:white;
+}
+.partOne,.partTwo{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-right: 2px solid rgba(21,53,53,0.5);
+    border-bottom: 2px solid rgba(21,53,53,0.5);
+    -webkit-box-shadow: 2px 1px 4px rgba(21,53,53,0.5);
+    -o-box-shadow: 2px 1px 4px rgba(21,53,53,0.5);
+    -moz-box-shadow: 2px 1px 4px rgba(21,53,53,0.5);
+    box-shadow: 2px 1px 4px rgba(21,53,53,0.5);
+    padding-bottom: 100px;
+}
+.partOne .profile{
+	margin-top: 40px;
+    border: 1px solid #EFFCEF;
+    background-color: #EFFCEF;
+    border-radius: 8px;
+    position: relative;
+}
+.partOne .profile a{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    color: #45AD5C;
+}
+.partOne .profile img{
+	width: 60px;
+    height: 60px;
+    border: 1px solid #effcef;
+    border-radius: 50%;
+    margin:20px;
+    cursor: pointer;
+}
+.partOne .profile span{
+	color: #000;
+	font-size: 24px;
+}
+.partOne .profile p{
+	position: absolute;
+    top: 60px;
+    left: 100px;
+    color: #C0A9A9;
+}
+.partOne .classify{
+	margin-top: 60px;
+}
+.partOne .classify p{
+	margin-top: 20px;
+}
+.partOne .classify img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.partOne .classify ul{
+    position: relative;
+}
+.partOne .classify ul .showMini{
+    top: -75px;
+    left: 280px;
+    width: 220px;
+    height: 240px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 2px 1px 4px rgba(56, 33, 33, 0.31);
+}
+.partOne .classify ul li span{
+    margin-left: 10px;
+}
+.partOne .classify ul .delete{
+    display: block;
+    margin: 45px auto 0;
+}
+.partOne .add{
+    margin-top: 65px;
+    text-align: center;
+}
+.partOne .add span{
+    background-color: #FBF2F1;
+    border-radius: 7px;
+    padding: 5px;
+    margin-right: 20px;
+}
+.partOne .add button{
+    padding: 3px;
+    margin-top: 20px;
+}
+.partOne .profile .showMini{
+    position: absolute;
+    top: 0;
+    left: 150px;
+    width: 150px;
+    height: 200px;
+    background-color: #fff;
+}
+.partOne .showMini img,.partOne .showMiniLast img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+.partOne .miniprofile{
+    border-top: 1px solid #000;
+}
+.partOne .miniprofile p{
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 15px;
+}
+.partOne .errorTips{
+    margin: 25px auto;
+    width: 90px;
+    padding: 10px;
+    white-space: nowrap;
+}
+.partOne .showMiniLast{
+    width: 150px;
+    height: 200px;
+    background-color: #d6f6de4d;
+    border: 1px solid #000;
+    margin: 40px auto;
+    font-size: 0.875rem;
+}
+.partOne .showMiniLast .addIt{
+    margin: 0px auto;
+    padding: 4px;
+    display: block;
+}
+.psrtTwo{
+    border-left: 0;
+}
+.partTwo .classifyName{
+    height: 120px;
+    border-bottom:2px solid #000;
+}
+.partTwo .classifyName h1{
+    margin: 0px auto;
+    width: 120px;
+    text-align: center;
+    padding: 40px 0;
+    color: #219e23;
+}
+.partTwo .chatContent{
+    min-height: 400px;
+}
+.partTwo .chatContent li{
+    margin: 10px auto;
+    position: relative;
+    width: 90%;
+    height: 70px;
+    padding-top: 10px;
+}
+.partTwo .chatContent li p.addContent{
+    border-color: transparent #e2e2e2 transparent transparent;
+    border-width: 10px 10px 0;
+    border-style: dashed solid dashed dashed;
+    border-right-color: #fff;
+    position: absolute;
+    right: 70px;
+    background-color: #9eea6a;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    padding-right: 10px;
+}
+.partTwo .chatContent li p.reply{
+    border-color: transparent transparent transparent transparent;
+    border-width: 10px 10px 0 10px;
+    border-style: dashed solid dashed dashed;
+    border-left-color: #fff;
+    position: absolute;
+    left: 60px;
+    background-color: #9eea6a;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.partTwo .chatContent li span.addUsername{
+    margin-right: 20px;
+    float: right;
+    margin-top: 10px;
+}
+.partTwo .chatContent li span.replayname{
+    margin-left: 10px;
+    float: left;
+    margin-top: 10px;
+}
+.partTwo .sendPart{
+    position: fixed;
+    width: 60%;
+    bottom: 80px;
+}
+.partTwo .sendPart .add,.partTwo .sendPart .send{
+    position: absolute;
+    top: 0;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(216, 233, 62, 0.5);
+    border: 2px solid #000;
+}
+.partTwo .sendPart .add{
+    left: 0;
+}
+.partTwo .sendPart input{
+    width: 100%;
+    height: 35px;
+    padding: 4px;
+    margin-left: 35px;
+    border: 2px solid #000;
+}
+.partTwo .sendPart .send{
+    right: -94px;
+    width: 60px;
+    border-left: 1px solid #DBDFE6;
+}
+/*profile.html*/
+form{
+    margin-top: 50px;
+    position: relative;
+}
+.wrap-profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:white; 
+}
+.changeProfile{
+    width: 60%;
+    margin:70px auto 0;
+    border: 2px solid #A6C59F;
+    padding-bottom: 30px;
+}
+.changeProfile .upload{
+    text-align: center;
+}
+.changeProfile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.userProfile,.signature{
+    margin-top: 10px;
+    font-size: 16px;
+}
+input[name='signature']{
+    width: 60%;
+}
+.ui_buton{
+    margin-top: 20px;
+    padding: 2px;
+    background-color: #8cf06e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#xFile{
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+.changeProfile .uploadbtn{
+    margin-top: 20px;
+}
+.preview{
+    text-align: center;
+    font-size: 16px;
+}
+.imgPreview{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 50%;        
+}
+.save{
+    margin-top: 30px
+}

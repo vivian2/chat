@@ -1,0 +1,27 @@
+<div class="wrap-profile">
+<div class="changeProfile clearfix">
+  <form enctype="multipart/form-data" class="upload col-md-6">
+  	<div class="imgProfile col-md-6">
+	    <span>我的头像: </span>
+		<img src={{loadimg}}>
+		<label class="ui_buton" for="xFile">选择图片</label>		
+		<input type="file" id="xFile" accept="image/*" multiple="multiple" name="uploadImg" ng-files="getTheFiles($files)">		
+	</div>
+	<div class="preview col-md-6">
+		<p>图片预览</p>
+		<div class="imgPreview"><img src={{load}}></div>
+		<button class="btn btn-success uploadbtn" ng-click="saveFormData()">上传</button>
+	</div>
+  </form>
+  <form ng-submit="save()" class="col-md-6">
+	<div class="userProfile">
+		<span>用户名: {{usenameProfile}}</span>
+	</div>
+	<div class="signature">
+		<span>个性签名:</span>
+		<input type="text" name="signature" ng-model="signatureProfile">
+	</div>
+	<button class="btn btn-success save">保存</button>
+  </form>	
+</div>
+</div>
